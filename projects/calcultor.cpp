@@ -65,3 +65,27 @@ int main() {
                     } else if (a == q1) {
                         break;
                     }
+                    }
+                if (a == q || a == q1 || a == x) {
+                    break;
+                }
+            }
+            // f(x) = x, f(a) = b , a
+            // f(x)=f(a)+(x-a)f^(a)
+            q = 1;
+            x -= a;
+            for (int i = 1; i < 2; i++) {
+                q *= b;
+            }
+            r = b + (x * (1 / (2 * q)));
+            cout << "Result = " << r << endl;
+
+        } else if (op == 'b')// nth root
+        {
+            cout << "Enter the number of (x) : ";
+            cin >> x;
+            cout << "Enter the number of (y) : ";
+            cin >> y;
+            if (x < 0 || y == 0) {
+                cout << "Error!\nPlease, Check the input!";
+            }
