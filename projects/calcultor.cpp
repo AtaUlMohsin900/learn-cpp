@@ -413,3 +413,244 @@ int main() {
                 }
                 //-------
                 // r = remainder , dec_1 = decimal value , i = increment value
+                int r, dec = 0, i = 0;
+                for (i = 0; oct > 0; i++) // convert to decimal
+                {
+                    int z = 1;
+                    // oct % 10 to get first digit of octal number ,*= power i of 8 to get decimal value for the first digit and store it in dec_1
+                    r = oct % 10;
+                    for (int j = 1; j <= i; j++) {
+                        z *= 8;
+                    }
+                    r *= z;
+                    dec += r;
+                    oct /= 10;
+                }
+                //------
+                if (op == 'a') //to binary
+                {
+                    int bin[16], i;
+                    for (i = 0; dec > 0; i++) {
+                        bin[i] = dec % 2;
+                        dec /= 2;
+                    }
+                    cout << "Result = ";
+                    for (i -= 1; i >= 0; i--) {
+                        cout << bin[i];
+                    }
+                    cout << "\n";
+                } else if (op == 'b') //to decimal
+                {
+                    cout << "Result = " << dec << endl;
+                } else if (op == 'c')//to hex
+                {
+                    char hex[100];
+                    int r = 0, i;
+                    for (i = 0; dec != 0; i++) {
+                        r = dec % 16;
+                        if (r < 10) {
+                            hex[i] = r + 48;
+                        } else {
+                            hex[i] = r + 55;
+                        }
+                        dec /= 16;
+                    }
+                    cout << "Result = ";
+                    for (i--; i >= 0; i--) {
+                        cout << hex[i];
+                    }
+                    cout << endl;
+                }
+            } else if (op == 'd')//from hex
+            {
+                char hex[15];
+                cout << "From Hex to binary\t'a'\nFrom Hex to octal\t'b'\nFrom Hex to decimal \t'c'\n>> ";
+                cin >> op;
+                if (op != 'a' && op != 'b' && op != 'c') //check input
+                {
+                    cout << "Invalid Input \n";
+                    return 0;
+                }
+                cout << "enter hex number (max length '7')\n>> ";
+                cin >> hex;
+                int length, dec = 0;
+                for (length = 0; hex[length] != '\0'; length++)
+                    if (length > 7) // check input
+                    {
+                        cout << "Invalid Input\n";
+                        return 0;
+                    }
+                for (int i = 0; i <= length - 1; i++) // check input
+                {
+                    if ((hex[i] >= '0' && hex[i] <= '9') || (hex[i] >= 'A' && hex[i] <= 'F')) {}
+                    else {
+                        cout << "Invalid Input (hex range from 0 to F)\n";
+                        return 0;
+                    }
+                }
+                //------
+                int i = 0, j = length;
+                for (; i < j / 2; i++) {
+                    char x = hex[i];
+                    hex[i] = hex[j - i - 1];
+                    hex[j - i - 1] = x;
+                }
+                for (int i = 0; i <= length - 1; i++)//convert to dec
+                {
+                    int z = 1;
+                    for (int j = 1; j <= i; j++) {
+                        z *= 16;
+                    }
+                    if (hex[i] >= '0' && hex[i] <= '9') {
+                        dec += (hex[i] - 48) * z;
+                    } else if (hex[i] >= 'A' && hex[i] <= 'F') {
+                        dec += (hex[i] - 55) * z;
+                    }
+                }
+                //-------
+                if (op == 'a')//to binary
+                {
+                    int bin[30], i;
+                    for (i = 0; dec > 0; i++) {
+                        bin[i] = dec % 2;
+                        dec /= 2;
+                    }
+                    cout << "result = ";
+                    for (i -= 1; i >= 0; i--) {
+                        cout << bin[i];
+                    }
+                    cout << "\n";
+                } else if (op == 'b')//to oct
+                {
+                    int oct[10], i;
+                    for (i = 0; dec > 0; i++) {
+                        oct[i] = dec % 8;
+                        dec /= 8;
+                    }
+                    cout << "result = ";
+                    for (i -= 1; i >= 0; i--) {
+                        cout << oct[i];
+                    }
+                    cout << "\n";
+                } else if (op == 'c')//to decimal
+                {
+                    cout << "result = " << dec << endl;
+                }
+            }
+        } else if (op == 'b')//calculation
+        {
+            char op;
+            int bin_1, bin_2, dec_1 = 0, dec_2 = 0, dec;
+            cout << "Note: addition '+' subtraction '-' multiply '*' division '/'\n";
+            cout << "enter fisrt number , operation , second number \n>> ";
+            cin >> bin_1 >> op >> bin_2;
+            int b1 = bin_1;
+            for (int j = 0; j <= b1; j++) {
+                if (b1 % 10 > 1 || b1 < 0) {
+                    cout << "Invalid Input (binary number must only contain '0' '1')\n\n";
+                    return 0;
+                }
+                b1 /= 10;
+            }
+            if (op != '+' && op != '-' && op != '*' && op != '/') {
+                cout << "Invalid Input \n";
+                return 0;
+            }
+            int b2 = bin_2;
+            for (int i = 0; i <= b2; i++) {
+                if (b2 % 10 > 1 || b2 % 10 < 0) {
+                    cout << "Invalid Input (binary number must only contain '0' '1')\n";
+                    return 0;
+                }
+                b2 /= 10;
+            }
+            if (bin_2 == 0) {
+                cout << "error !\n";
+                return 0;
+            }
+            for (int i = 0; bin_1 > 0; i++) {
+                int z = 1;
+                //bin % 10 = first digit , *= power i of 2 to get a decimal value of first digit in octal number and store it in dec_1
+                int r = bin_1 % 10; // i = 1
+                for (int j = 1; j <= i; j++) {
+                    z *= 2;
+                }
+                r *= z;
+                dec_1 += r;
+                //bin /= 10 to get rid of first digit and in the next round we get new value of first digit
+                bin_1 /= 10;
+            }
+            for (int i = 0; bin_2 > 0; i++) {
+                int z = 1;
+                //bin % 10 = first digit , *= power i of 2 to get a decimal value of first digit in octal number and store it in dec_1
+                int r = bin_2 % 10; // i = 1
+                for (int j = 1; j <= i; j++) {
+                    z *= 2;
+                }
+                r *= z;
+                dec_2 += r;
+                //bin /= 10 to get rid of first digit and in the next round we get new value of first digit
+                bin_2 /= 10;
+            }
+            if (op == '+') {
+                dec = dec_1 + dec_2;
+                int bin[20], i;
+                for (i = 0; dec > 0; i++) {
+                    bin[i] = dec % 2;
+                    dec /= 2;
+                }
+                cout << "result = ";
+                for (i -= 1; i >= 0; i--) {
+                    cout << bin[i];
+                }
+                cout << "\n";
+            } else if (op == '-') {
+                if (dec_1 < dec_2)
+                    cout << "Invalid Input\n";
+                else {
+                    dec = dec_1 - dec_2;
+                    int bin[20], i;
+                    for (i = 0; dec > 0; i++) {
+                        bin[i] = dec % 2;
+                        dec /= 2;
+                    }
+                    cout << "result = ";
+                    for (i -= 1; i >= 0; i--) {
+                        cout << bin[i];
+                    }
+                    cout << "\n";
+                }
+            } else if (op == '*') {
+                dec = dec_1 * dec_2;
+                int bin[20], i;
+                for (i = 0; dec > 0; i++) {
+                    bin[i] = dec % 2;
+                    dec /= 2;
+                }
+                cout << "result = ";
+                for (i -= 1; i >= 0; i--) {
+                    cout << bin[i];
+                }
+                cout << "\n";
+            } else if (op == '/') {
+                if (dec_1 < dec_2) {
+                    cout << "result = 0 \n";
+                } else {
+                    dec = dec_1 / dec_2;
+                    int bin[20], i;
+                    for (i = 0; dec > 0; i++) {
+                        bin[i] = dec % 2;
+                        dec /= 2;
+                    }
+                    cout << "result = ";
+                    for (i -= 1; i >= 0; i--) {
+                        cout << bin[i];
+                    }
+                    cout << "\n";
+                }
+            }
+        }
+    } else {
+        cout << "Invalid Input ! \n";
+    }
+}
