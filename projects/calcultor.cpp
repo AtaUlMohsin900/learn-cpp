@@ -89,3 +89,29 @@ int main() {
             if (x < 0 || y == 0) {
                 cout << "Error!\nPlease, Check the input!";
             }
+
+            //f(X) = x , y = nth root , b = root of x
+            double a, b = 1, r;
+            double q = x, q1 = x;
+            // q and q1 = number near x accept the root of nth
+            // a = b power y
+            for (long long int i = 0; i < x; i++, q--, q1++) {
+                b = 1;
+                for (long long int j = 0; j < x / 3; j++, b++) {
+                    a = 1;
+
+                    for (int j = 0; j < y; j++)// a power y
+                    {
+                        a *= b;
+                    }
+                    if (a == q) {
+                        break;
+                    } else if (a == q1) {
+                        break;
+                    }
+
+                }
+                if (a == q || a == q1 || a == x) {
+                    break;
+                }
+            }
