@@ -20,6 +20,9 @@ int main(){
     s1.rollnum = 458;
     s1.age = 45;
     s1.cgpa = 3.56;
-    cout<<s1.name<<endl;
+    cout<<"Name: "<<s1.name<<endl;
+    cout<<"Roll No: "<<s1.rollnum<<endl;
+    cout<<"CGPA: "<<s1.cgpa<<endl;
+    cout<<"Age: "<<s1.age<<endl;
 	return 0;	
 }
