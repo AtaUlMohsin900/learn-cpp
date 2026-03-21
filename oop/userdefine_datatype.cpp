@@ -6,7 +6,29 @@ class Student{// Student is a new user define datatype
 		int rollnum;
 		int age;
 		float cgpa;
+
 };
+// OR Small suggestion (optional):
+// Since you're using class (which defaults to private), you might want to explicitly mark the data as public (which you did correctly), or consider adding a constructor to initialize objects:
+
+// OR Small suggestion (optional):
+// Since you're using class (which defaults to private), you might want to explicitly mark the data as public (which you did correctly), or consider adding a constructor to initialize objects:
+
+//class Student {
+  //  public:
+  //    string name;
+    //    int rollnum;
+      //  int age;
+        //float cgpa;
+        
+        // Optional: Constructor
+       // Student(string n, int r, int a, float c) {
+         //   name = n;
+        // rollnum = r;
+          //  age = a;
+            //cgpa = c;
+        //}
+//};
 
 int main(){
     Student s;
@@ -27,21 +49,4 @@ int main(){
 	return 0;	
 }
 
-// OR Small suggestion (optional):
-// Since you're using class (which defaults to private), you might want to explicitly mark the data as public (which you did correctly), or consider adding a constructor to initialize objects:
 
-class Student {
-    public:
-        string name;
-        int rollnum;
-        int age;
-        float cgpa;
-        
-        // Optional: Constructor
-        Student(string n, int r, int a, float c) {
-            name = n;
-            rollnum = r;
-            age = a;
-            cgpa = c;
-        }
-};
