@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-class Student{// Student is a new datatype
+class Student{// Student is a new user define datatype
 	public:
 		string name;
 		int rollnum;
@@ -26,3 +26,22 @@ int main(){
     cout<<"Age: "<<s1.age<<endl;
 	return 0;	
 }
+
+// OR Small suggestion (optional):
+// Since you're using class (which defaults to private), you might want to explicitly mark the data as public (which you did correctly), or consider adding a constructor to initialize objects:
+
+class Student {
+    public:
+        string name;
+        int rollnum;
+        int age;
+        float cgpa;
+        
+        // Optional: Constructor
+        Student(string n, int r, int a, float c) {
+            name = n;
+            rollnum = r;
+            age = a;
+            cgpa = c;
+        }
+};
