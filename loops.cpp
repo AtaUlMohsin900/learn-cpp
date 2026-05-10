@@ -32,12 +32,25 @@ using namespace std;
 //   return 0;
 // }
 
+// int main() {
+//   int number;
+//   do {
+//     cout << "Enter a positive number: ";
+//     cin >> number;
+//   } while (number > 0);
+
+//   return 0;
+// }
+
 int main() {
-  int number;
-  do {
-    cout << "Enter a positive number: ";
-    cin >> number;
-  } while (number > 0);
+  int countdown = 3;
+
+  while (countdown > 0) {
+    cout << countdown << "\n";
+    countdown--;
+  }
+
+  cout << "Learn CPP\n";
 
   return 0;
 }
