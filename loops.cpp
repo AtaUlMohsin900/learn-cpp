@@ -12,12 +12,22 @@ using namespace std;
 
 // Do While Loop
 
+// int main() {
+//   int i = 0;
+//   do {
+//     cout << i << "\n";
+//     i++;
+//   }
+//   while (i < 5);
+//   return 0;
+// }
+
 int main() {
-  int i = 0;
+  int i = 10;
   do {
-    cout << i << "\n";
+    cout << "i is " << i << "\n";
     i++;
-  }
-  while (i < 5);
+  } while (i < 5);
+
   return 0;
 }
