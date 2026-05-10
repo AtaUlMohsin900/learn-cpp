@@ -22,12 +22,22 @@ using namespace std;
 //   return 0;
 // }
 
+// int main() {
+//   int i = 10;
+//   do {
+//     cout << "i is " << i << "\n";
+//     i++;
+//   } while (i < 5);
+
+//   return 0;
+// }
+
 int main() {
-  int i = 10;
+  int number;
   do {
-    cout << "i is " << i << "\n";
-    i++;
-  } while (i < 5);
+    cout << "Enter a positive number: ";
+    cin >> number;
+  } while (number > 0);
 
   return 0;
 }
