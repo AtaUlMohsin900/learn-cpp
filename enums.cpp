@@ -1,24 +1,23 @@
 #include <iostream>
 using namespace std;
-
-  enum Level {
-  LOW = 1,
-  MEDIUM,
-  HIGH
+enum Level {
+  slow = 1,
+  normal,
+  fast
 };
 
 int main() {
-  enum Level myVar = MEDIUM;
+  enum Level myVar = normal;
 
   switch (myVar) {
     case 1:
-      cout << "Low Level";
+      cout << "Slow";
       break;
     case 2:
-      cout << "Medium level";
+      cout << "Normal";
       break;
     case 3:
-      cout << "High level";
+      cout << "Fast";
       break;
   }
   return 0;
