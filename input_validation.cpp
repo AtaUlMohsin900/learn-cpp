@@ -3,7 +3,7 @@ using namespace std;
 int main() {
     int number;
 
-    std::cout << "Enter a number: ";
+        cout << "Enter a number: ";
     while (!(std::cin >> number)) {  // Keep asking until the user enters a valid number
         cout << "Invalid input. Try again: ";
         cin.clear(); // Reset input errors
