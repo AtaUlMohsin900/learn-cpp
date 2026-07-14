@@ -3,12 +3,20 @@ using namespace std;
 int main() {
     int number;
 
-        cout << "Enter a number: ";
-    while (!(std::cin >> number)) {  // Keep asking until the user enters a valid number
-        cout << "Invalid input. Try again: ";
-        cin.clear(); // Reset input errors
-        cin.ignore(10000, '\n'); // Remove bad input
-    }
+    //     cout << "Enter a number: ";
+    // while (!(std::cin >> number)) {  // Keep asking until the user enters a valid number
+    //     cout << "Invalid input. Try again: ";
+    //     cin.clear(); // Reset input errors
+    //     cin.ignore(10000, '\n'); // Remove bad input
+    // }
+
+    int number;
+do {
+  cout << "Choose a number between 1 and 5: ";
+  cin >> number;
+} while (number < 1 || number> 5);  // Keep asking until the user enters a number between 1 and 5
+
+cout << "You chose: " << number;
 
     cout << "You entered: " << number << '\n';
     return 0;
