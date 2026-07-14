@@ -10,14 +10,22 @@ int main() {
     //     cin.ignore(10000, '\n'); // Remove bad input
     // }
 
-    int number;
+//     int number;
+// do {
+//   cout << "Choose a number between 1 and 5: ";
+//   cin >> number;
+// } while (number < 1 || number> 5);  // Keep asking until the user enters a number between 1 and 5
+
+// cout << "You chose: " << number;
+
+//     cout << "You entered: " << number << '\n';
+
+string name;
 do {
-  cout << "Choose a number between 1 and 5: ";
-  cin >> number;
-} while (number < 1 || number> 5);  // Keep asking until the user enters a number between 1 and 5
+  cout << "Enter your name: ";
+  getline(cin, name);
+} while (name.empty());  // Keep asking until the user enters something (name is not empty)
 
-cout << "You chose: " << number;
-
-    cout << "You entered: " << number << '\n';
+cout << "Hello, " << name;
     return 0;
 }
