@@ -5,14 +5,23 @@
 using namespace std;
 
 int main() {
-  // Create a vector called cars that will store strings
-  vector<string> cars = {"Toyota", "Dongfing", "GMC", "Nissan"};
 
-  // Get the first element
-  cout << cars[0] << "\n";
-  
-  // Get the second element
+    // vector<int> val ={1,2,3};
+// cout << val[0] <<endl;
+// vector<int> val (5, 0);
+// cout << val[0] <<endl;
+// cout << val[1] <<endl;
+// cout << val[2] <<endl;
+// cout << val[3] <<endl;
+// cout << val[4] <<endl;
+
+//   Create a vector called cars that will store strings
+  vector<string> cars = {"Toyota", "Dongfing", "GMC", "Nissan"};
+//   Get the first element
+  cout << cars[0] << "\n"; 
+//   Get the second element
   cout << cars[1] << "\n";
+
   return 0;
 }
 
@@ -33,11 +42,3 @@ int main() {
 
 
 
-
-
-
-
-
-
-
-m̧pty
