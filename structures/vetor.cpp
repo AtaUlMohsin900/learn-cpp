@@ -16,11 +16,16 @@ int main() {
 // cout << val[4] <<endl;
 
 //   Create a vector called cars that will store strings
-  vector<string> cars = {"Toyota", "Dongfing", "GMC", "Nissan"};
+//   vector<string> cars = {"Toyota", "Dongfing", "GMC", "Nissan"};
 //   Get the first element
-  cout << cars[0] << "\n"; 
+//   cout << cars[0] << "\n"; 
 //   Get the second element
-  cout << cars[1] << "\n";
+//   cout << cars[1] << "\n";
+
+vector<char> val = {'a','b','c','d','e','f'};
+   for(char i : val){
+    cout << i << endl;
+   }
 
   return 0;
 }
