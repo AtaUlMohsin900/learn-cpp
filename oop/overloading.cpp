@@ -3,8 +3,9 @@
 using namespace std;
 
 class person {
-    int age;
-    string name;
+    public:
+        int age;
+        string name;
 person()
 {
     age = 0;
