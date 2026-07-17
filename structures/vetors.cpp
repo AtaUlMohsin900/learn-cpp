@@ -33,14 +33,21 @@ int main() {
 
 
 // using for each loop
-
 vector<int> vec;
- cout << "Size of vetor : "<< size.vec() <<endl;   // v.size()Number of elements
-vec.push_back(48);
+// cout << "Size of vetor : "<< size.vec() <<endl;   // push_back and pop_back
+vec.push_back(4);
+vec.push_back(8);
+vec.push_back(5);
+vec.push_back(9);
+cout << "After push back size : "<< size.vec() <<endl;
+vec.pop_back(); // 9 will be deleted 
+// for(int val : vec){
+//     cout << vel << endl;
+//    }
+cout << vec.front() <<endl;          // it return front value
+cout << vec.back()  <<end;           // it return last value
+cout << vec.at(2) <<endl;            // Another syntax for accessing a value of particular index 
 
-   for(char val : vec){
-    cout << vec << endl;
-   }
 
   return 0; 
 }
