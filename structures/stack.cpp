@@ -1,3 +1,9 @@
+// LIFO stands for Last in, First Out. To vizualise LIFO, think of a box, where boxes are both added and removed from the top.
+//  So when removing a pancake, it will always be the last one you added. This way of organizing elements is called 
+// LIFO in computer science and programming.
+
+
+
 #include <iostream>
 #include <stack>
 using namespace std;
