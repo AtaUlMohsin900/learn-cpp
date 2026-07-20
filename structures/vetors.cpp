@@ -32,21 +32,31 @@ int main() {
 // v.empty()           Returns true if empty
 
 
-// using for each loop
-vector<int> vec;
-// cout << "Size of vetor : "<< size.vec() <<endl;   // push_back and pop_back
+// // using for each loop
+// vector<int> vec;
+// // cout << "Size of vetor : "<< size.vec() <<endl;   // push_back and pop_back
+// vec.push_back(4);
+// vec.push_back(8);
+// vec.push_back(5);
+// vec.push_back(9);
+// cout << "After push back size : "<< size.vec() <<endl;
+// vec.pop_back(); // 9 will be deleted 
+// // for(int val : vec){
+// //     cout << vel << endl;
+// //    }
+// cout << vec.front() <<endl;          // it return front value
+// cout << vec.back()  <<end;           // it return last value
+// cout << vec.at(2) <<endl;            // Another syntax for accessing a value of particular index 
+vetor <int> vec;
+
+vec.push_back(0);
+vec.push_back(1);
+vec.push_back(2);
+vec.push_back(3);
 vec.push_back(4);
-vec.push_back(8);
-vec.push_back(5);
-vec.push_back(9);
-cout << "After push back size : "<< size.vec() <<endl;
-vec.pop_back(); // 9 will be deleted 
-// for(int val : vec){
-//     cout << vel << endl;
-//    }
-cout << vec.front() <<endl;          // it return front value
-cout << vec.back()  <<end;           // it return last value
-cout << vec.at(2) <<endl;            // Another syntax for accessing a value of particular index 
+
+cout << vec.size() << endl;
+cout << vec.capacity() << endl;
 
 
   return 0; 
