@@ -1,3 +1,4 @@
+// A queue stores multiple elements in a specific order, called FIFO.
 // FIFO stands for First in, First Out. To visualize FIFO, think of a queue as people standing in line in a supermarket. 
 // The first person to stand in line is also the first who can pay and leave the supermarket. This way of organizing elements is 
 // called FIFO in computer science and programming.
