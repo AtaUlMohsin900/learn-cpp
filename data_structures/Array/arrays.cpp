@@ -8,7 +8,8 @@
 using namespace std;
 
 int main(){
-    int numbers[5] = {100, 55 , 30, 45, 57}
+    int marks[5] = {100, 55 , 30, 45, 57};
+    int size = 5;
     // auto save in arrays memory
     // double int marks[] = {75.9 , 58.2 , 45.4 , 64.4, 34.4};
     // change value of arrays also posible.
@@ -21,11 +22,10 @@ int main(){
 // we should access the value of array in limit of array otherwise it returns garbage value.
 
 // We gerneraly use loops when we perform operations on arrays.
-cout << sizeof(marks) / sizeof(int) <<endl;
+// cout << sizeof(marks) / sizeof(int) <<endl;
 for(int i=0; i<size; i++){
     cout << marks[i] << endl;
 }
-
 
     return 0;
 }
