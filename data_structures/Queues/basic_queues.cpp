@@ -32,10 +32,14 @@ int main(){
 queue<string> cars;
 
 // Add elements to the queue
-cars.push("English");
-cars.push("Math");
-cars.push("Physics");
-cars.push("Computer Sceince");
+books.push("English");
+books.push("Math");
+books.push("Physics");
+books.push("Computer Science");// Access the front element (first and oldest)
+cout << books.front();  // Outputs "English"
+
+// Access the back element (last and newest)
+cout << books.back();  // Outputs "Computer Science"
 
     retrun 0;
 }
