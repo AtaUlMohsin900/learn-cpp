@@ -13,6 +13,9 @@ int main() {
   return 0;
 }
 
-// You can add and remove elements from both the beginning and at the end of a list, while vectors are generally optimized for adding and removing at the end.
+// You can add and remove elements from both the beginning and at the end of a list, 
+// while vectors are generally optimized for adding and removing at the end.
 
-// Unlike vectors, a list does not support random access, meaning you cannot directly jump to a specific index, or access elements by index numbers.
+
+// Unlike vectors, a list does not support random access, meaning you cannot directly 
+// jump to a specific index, or access elements by index numbers.

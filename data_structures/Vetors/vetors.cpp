@@ -1,4 +1,5 @@
-// vector is a dynamic array from the STL that automatically resize when you add or remove elements.
+// vector is a dynamic array from the STL that automatically resize when you add or remove 
+// elements.
 
 #include <iostream>
 #include <vector>

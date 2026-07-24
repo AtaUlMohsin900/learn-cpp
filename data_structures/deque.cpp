@@ -29,5 +29,11 @@ int main() {
   // Get the last element
   cout << books.back() << "\n";  // Outputs Math
 
+  // Get the first element
+  cout << books[0];  // Outputs English
+
+  / Get the second element
+  cout << books[1];  // Math
+
   return 0;
 }

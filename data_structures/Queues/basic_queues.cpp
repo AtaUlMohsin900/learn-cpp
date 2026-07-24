@@ -9,11 +9,11 @@
 // To create a queue, use the queue keyword, and specify the type of values it should store 
 // within angle brackets <> and then the name of the queue, like: queue<type> queueName.
 
-// Create a queue of strings called cars
+// Create a queue of strings called books
 // queue<string> books;
 
 // You cannot add elements to the queue at the time of declaration, like you can with vectors:
-// queue<string> cars = {"English", "Math", "Physics", "Computer Sceince"};
+// queue<string> books = {"English", "Math", "Physics", "Computer Sceince"};
 
 //  Add Elements.
 
@@ -29,7 +29,7 @@ using namespace std;
 int main(){
 
     // Create a queue of strings
-queue<string> cars;
+queue<string> books;
 
 // Add elements to the queue
 books.push("English");

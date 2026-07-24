@@ -17,8 +17,8 @@
 #include <queue>
 
 // Create a vector called cars that will store strings
-vector<string> cars = {"Volvo", "BMW", "Ford", "Mazda"};
+vector<string> books = {"English", "Math", "Physics", "Computer Science"};
 
 // Print vector elements
-for (string car : cars) {
-  cout << car << "\n
+for (string book : books) {
+  cout << book << "\n
