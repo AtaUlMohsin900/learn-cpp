@@ -16,11 +16,17 @@ using namespace std;
 
 int main() {
   // Create a set called numbers that will store integers
-  set<int> numbers = {1, 7, 3, 2, 5, 9};
+  // set<int> numbers = {1, 7, 3, 2, 5, 9};
+
+  set<string> books = {"English", "Math", "Physics", "Computer Science"};
 
   // Print set elements
-  for (int num : numbers) {
-    cout << num << "\n";
+  // for (int num : numbers) {
+  //   cout << num << "\n";
+  // }
+
+  for (string book: books){
+    cout << book << "\n";
   }
   return 0;
 }
