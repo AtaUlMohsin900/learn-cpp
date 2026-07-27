@@ -12,6 +12,10 @@
 
 // Include the map library #include <map>
 
+// To create a map, use the map keyword, and specify the type of both the key and the value 
+// it should store within angle brackets <>. At last, specify the name of the map, like: map<keytype,
+//  valuetype> mapName:
+
 #include <iostream>
 #include <map>
 using namespace std;
