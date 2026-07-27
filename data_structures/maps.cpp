@@ -21,14 +21,14 @@
 using namespace std;
 
 int main() {
-  // Create a map that will store the name and age of different people
-  map<string, int> employee = { {"Waseem", 54}, {"Amjed", 21}, {"Amir", 46} };
+  // Create a map that will store the name and salary of different people
+  map<string, int> salary = { {"Waseem", 54000}, {"Amjed", 21000}, {"Amir", 46000} };
 
   // Get the value associated with the key "Waseem"
-  cout << "Waseem is: " << employee["Waseem"] << "\n"; 
+  cout << "Waseem salary: " << salary["Waseem"] << "\n"; 
 
   // Get the value associated with the key "Amjed"
-  cout << "Amjed is: " << employee["Amjed"] << "\n";
+  cout << "Amjed salary: " << salary["Amjed"] << "\n";
 
   return 0;
 }
