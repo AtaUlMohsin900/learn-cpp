@@ -29,6 +29,8 @@
 using namespace std;
 
 int main() {
+  // You cannot access map elements by referring to index numbers, like you would with arrays and vectors.
+  // Instead, you can access a map element by referring to its key inside square brackets []:
   // Create a map that will store the name and salary of different people
   // map<string, int> salary = { {"Waseem", 54000}, {"Amjed", 21000}, {"Amir", 46000} };
 
@@ -46,6 +48,14 @@ int main() {
   map<int, string>::iterator it;
   for (it = salary.begin(); it != salary .end(); ++it) {
     cout << it->first << " " << it->second << endl;
-  }
+
+  // .at() function is often preferred over square brackets [] because it throws an error message if the element does not exist:
+  // Create a map that will store the name and age of different salary
+  map<string, int> salary = { {"Waseem", 54000}, {"Amjed", 21000}, {"Amir", 46000} };
+
+  // Try to access an element that does not exist (throws an exception)
+  cout << salary.at("Ahmed");
+  
+
   return 0;
 }
