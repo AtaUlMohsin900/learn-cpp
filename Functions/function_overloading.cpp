@@ -13,8 +13,13 @@ double addFuncDouble(double x, double y) {
 }
 
 int main() {
-  int myNum1 = addFuncInt(8, 5);
-  double myNum2 = addFuncDouble(4.3, 6.26);
+  // int myNum1 = addFuncInt(8, 5);
+  // double myNum2 = addFuncDouble(4.3, 6.26);
+  // cout << "Int: " << myNum1 << "\n";
+  // cout << "Double: " << myNum2;
+
+  int myNum1 = addFunc(8, 5);
+  double myNum2 = addFunc(4.3, 6.26);
   cout << "Int: " << myNum1 << "\n";
   cout << "Double: " << myNum2;
   return 0;
