@@ -19,14 +19,19 @@
 using namespace std;
 
 int main() {
-  // Create an array of integers
-//   int myNumbers[5] = {10, 20, 30, 40, 50};
+
   
   // Loop through integers
-//   
-string word = "hello coders";
-  for (char c : word) {
-    cout << c << "\n";
+  // Create an array of integers
+  int myNumbers[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+  for (int x : myNumbers) {
+    cout << x << "\n"; 
   }
+  
+// Create an array of strings    
+// string city = "Islamabad";
+//   for (char c : city) {
+//     cout << c << "\n";
+//   }
   return 0;
 }
