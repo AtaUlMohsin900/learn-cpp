@@ -32,21 +32,69 @@
 // In the example below, we send a small lambda function to another function, which then runs it twice:
 
 
+// #include <iostream>
+// #include <functional> // Needed for std::function
+// using namespace std;
+
+// // A function that takes another function as parameter
+// void myFunction(function<void()> func) {
+//   func();
+//   func();
+// }
+
+// int main() {
+//   auto message = []() {
+//     cout << "Hello Coders\n";
+//   };
+
+//   myFunction(message);
+//   return 0;
+// }
+
+// f you want the lambda to use the latest value of a variable (not just a copy),
+//  you can use [&] to capture it by reference.
+
+// This means the lambda will work with the original variable, not a separate copy:
+
+// int x = 10;
+
+//   auto show = [&x]() {
+//     cout << x;
+//   };
+
+//   x = 20;  // Change x after the lambda is created
+
+//   show();
+
+
+// Regular Functions vs Lambda Functions
+// Both regular functions and lambda functions allow you to package code for later execution, yet they suit distinct scenarios.
+
+// Choose a regular function when:
+// You intend to reuse it across many parts of your program
+// You wish to assign a descriptive, self-documenting name
+// The operation involves multiple lines or intricate steps
+
+// Choose a lambda function when:
+// You require the function for a single, immediate use
+// The expression is brief and straightforward
+// You need to supply a quick callback to a higher-order function
+
+// These two code snippets perform identical tasks. They each compute the addition of two numbers.
+
+
 #include <iostream>
-#include <functional> // Needed for std::function
 using namespace std;
 
-// A function that takes another function as parameter
-void myFunction(function<void()> func) {
-  func();
-  func();
+int main(){
+
+
+  int add(int a, int b) {  // Regular Function
+  return a + b;
 }
 
-int main() {
-  auto message = []() {
-    cout << "Hello Coders\n";
-  };
-
-  myFunction(message);
+auto add = [](int a, int b) { // Lambda Function
+  return a + b;
+};
   return 0;
 }
