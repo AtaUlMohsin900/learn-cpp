@@ -82,19 +82,25 @@
 
 // These two code snippets perform identical tasks. They each compute the addition of two numbers.
 
-
 #include <iostream>
 using namespace std;
 
-int main(){
-
-
-  int add(int a, int b) {  // Regular Function
-  return a + b;
+int add(int a, int b) {  // Regular Function
+    return a + b;
 }
 
-auto add = [](int a, int b) { // Lambda Function
-  return a + b;
-};
-  return 0;
+int main() {
+    // Use the regular function
+    int result1 = add(5, 6);
+    cout << "Result from regular function: " << result1 << endl;
+    
+    // Lambda Function with a different name
+    auto addLambda = [](int a, int b) {
+        return a + b;
+    };
+    
+    int result2 = addLambda(5, 6);
+    cout << "Result from lambda: " << result2 << endl;
+    
+    return 0;
 }
