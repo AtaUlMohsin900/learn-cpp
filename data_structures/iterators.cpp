@@ -39,6 +39,12 @@ int main() {
 vector<string> books = {"English", "Math", "Physics", "Computer Science"};
 
 vector<string>::iterator it;
+// end() points to one position after the last element in the vector (meaning it doesn't
+//  point to an actual element, but rather indicates that this is the end of the vector).
+// So, to use end() to point to the last element in the cars vector (Computer science), you can use cars.end() - 1:
+
+// Point to the last element
+it = books.end() - 1;
 
   return 0;
 }
