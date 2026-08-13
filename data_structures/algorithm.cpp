@@ -27,8 +27,8 @@ int main() {
   sort(books.begin(), books.end());
 
   // Print books in alphabetical order
-  for (string car : books) {
-    cout << car << "\n";
+  for (string book : books) {
+    cout << book << "\n";
   }
   
   return 0;
