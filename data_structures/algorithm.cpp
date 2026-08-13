@@ -21,15 +21,27 @@ using namespace std;
 
 int main() {
   // Create a vector called books that will store strings
-  vector<string> books = {"English", "Math", "Physics", "Computer Science"};
+  // vector<string> books = {"English", "Math", "Physics", "Computer Science"};
 
-  // Sort books in alphabetical order
-  sort(books.begin(), books.end());
+  // // Sort books in alphabetical order
+  // sort(books.begin(), books.end());
 
-  // Print books in alphabetical order
-  for (string book : books) {
-    cout << book << "\n";
+  // // Print books in alphabetical order
+  // for (string book : books) {
+  //   cout << book << "\n";
+  // }
+
+  // Create a vector called numbers that will store integers
+  vector<int> numbers = {1, 7, 3, 5, 9, 2};
+
+  // Sort numbers numerically
+  sort(numbers.begin(), numbers.end());
+
+  // Print numbers
+  for (int num : numbers) {
+    cout << num << "\n";
   }
+  // To reverse the order, you can use rbegin() and rend() instead of begin() and end():
   
   return 0;
 }
