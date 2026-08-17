@@ -42,6 +42,17 @@ int main() {
     cout << num << "\n";
   }
   // To reverse the order, you can use rbegin() and rend() instead of begin() and end():
-  
+  // To only sort specific elements, you could write:
+
+  // Create a vector called numbers that will store integers
+  vector<int> numbers = {1, 7, 3, 5, 9, 2};
+
+  // Sort numbers numerically, starting from the fourth element (only sort 5, 9, and 2)
+  sort(numbers.begin() + 3, numbers.end());
+
+  // Print numbers
+  for (int num : numbers) {
+    cout << num << "\n";
+  }
   return 0;
 }
